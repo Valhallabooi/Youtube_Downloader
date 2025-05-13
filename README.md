@@ -1,7 +1,11 @@
 # Youtube_Downloader
-# Author: Martin
-Made a simple Youtube_Downloader with a Gui
+# Author: Martin Kleppa
+Made a simple Youtube video downloader with a Gui
 
 Install: pip install yt_dlp
 
 Install: ffmpeg
+
+Install: tkinter
+
+or use the executables in the executables folder
