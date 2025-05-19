@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>yt_Downloader_V4</string>
 	<key>CFBundleIconFile</key>
-	<string>icon-windowed.icns</string>
+	<string>icon.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>yt_Downloader_V4</string>
 	<key>CFBundleInfoDictionaryVersion</key>

@@ -1,6 +1,8 @@
 import yt_dlp
 import tkinter as tk
 from tkinter import filedialog, messagebox
+import sys
+import os
 
 def download():
     url = url_entry.get()
@@ -16,8 +18,17 @@ def download():
         messagebox.showerror("Error", "Please enter a URL and select a folder.")
         return
 
+    # Determine ffmpeg path whether running from source or PyInstaller bundle
+    if hasattr(sys, '_MEIPASS'):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.abspath(".")
+
+    ffmpeg_path = os.path.join(base_path, "ffmpeg" if os.name != "nt" else "ffmpeg.exe")
+
     ydl_opts = {
         'outtmpl': f"{save_path}/%(title)s.%(ext)s",
+        'ffmpeg_location': ffmpeg_path,
     }
 
     if format_choice == "mp3":
